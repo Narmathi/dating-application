@@ -1,0 +1,199 @@
+.agGrid {
+  --ag-border-color: transparent;
+  --ag-row-border-color: #e5e7eb;
+  --ag-header-background-color: #f9fafb;
+  --ag-background-color: #ffffff;
+  --ag-odd-row-background-color: #ffffff;
+  --ag-header-foreground-color: #6b7280;
+  --ag-foreground-color: #374151;
+  --ag-font-size: 14px;
+  --ag-font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.agGrid :global(.ag-header) {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 6px 6px 0 0;
+}
+
+.agGrid :global(.ag-header-cell) {
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 0 16px;
+  border-right: none !important;
+}
+
+.agGrid :global(.ag-header-cell::after) {
+  display: none;
+}
+
+.agGrid :global(.ag-header-cell-text) {
+  font-weight: 500;
+}
+
+/* ============================= */
+/* ROWS & CELLS */
+/* ============================= */
+
+.agGrid :global(.ag-row) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.agGrid :global(.ag-row:hover) {
+  background-color: #f9fafb;
+}
+
+.agGrid :global(.ag-row-selected) {
+  background-color: transparent;
+}
+
+.agGrid :global(.ag-row-selected:hover) {
+  background-color: #f9fafb;
+}
+
+.agGrid :global(.ag-cell) {
+  padding: 0 16px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  border: none !important;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.agGrid :global(.ag-cell:focus),
+.agGrid :global(.ag-cell:focus-within) {
+  outline: none !important;
+  border: none !important;
+}
+
+.agGrid :global(.ag-paging-description) {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.agGrid :global(.ag-paging-description > span:not(.ag-paging-number)) {
+  margin-top: 8px;
+}
+
+/* ============================= */
+/* GRID WRAPPER */
+/* ============================= */
+
+.agGrid :global(.ag-root-wrapper) {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.agGrid :global(.ag-ltr .ag-cell) {
+  border-right: none;
+}
+
+/* ============================= */
+/* PAGINATION */
+/* ============================= */
+
+.agGrid :global(.ag-paging-panel) {
+  border-top: 1px solid #e5e7eb;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 52px;
+}
+
+.agGrid :global(.ag-paging-row-summary-panel) {
+  color: #374151;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.agGrid :global(.ag-paging-page-summary-panel) {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Pagination Buttons */
+.agGrid :global(.ag-paging-button) {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agGrid :global(.ag-paging-button:hover:not(:disabled)) {
+  background-color: #f9fafb;
+}
+
+.agGrid :global(.ag-paging-button:disabled) {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Page Numbers */
+.agGrid :global(.ag-paging-number) {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.agGrid :global(.ag-paging-number:hover) {
+  background-color: #f9fafb;
+}
+
+.agGrid :global(.ag-paging-number-selected),
+.agGrid :global(.ag-paging-number[data-ref="lbCurrent"]) {
+  background-color: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.agGrid :global(.ag-paging-page-size) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.agGrid :global(.ag-paging-page-size select) {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #374151;
+}
+
+.agGrid :global(.ag-paging-page-size .ag-wrapper) {
+  padding: 7px;
+}
+
+.ellipsisCell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
