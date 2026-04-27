@@ -42,10 +42,30 @@ A modern and scalable **Dating Application** built with **Next.js**, **TypeScrip
 
 ### 1. Clone the Repository
 ```bash
+# Clone project
 git clone https://github.com/your-username/dating-app.git
 cd dating-app
 
+# Install dependencies
 npm install
+
+# Setup environment
+DATABASE_URL="postgresql://user:password@localhost:5432/dating_app"
+JWT_SECRET="your_secret_key"
+
+
+# Run Prisma
+npx prisma init
+npx prisma migrate dev --name init
+npx prisma generate
+
+# Start app
+npm run dev
+
+
+
+
+
 
 
 
